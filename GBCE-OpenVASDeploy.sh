@@ -77,7 +77,8 @@ docker compose -f $DOWNLOAD_DIR/docker-compose-$RELEASE.yml -p greenbone-communi
     exec -u gvmd gvmd gvmd --user=admin --new-password=$password
 ## MOD
 sleep 2
-echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/)"
+echo
+echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/")"
 ## MOD
 echo
 echo "The feed data will be loaded now. This process may take several minutes up to hours."
