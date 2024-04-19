@@ -76,7 +76,7 @@ read -s -p "Password for admin user: " password
 docker compose -f $DOWNLOAD_DIR/docker-compose-$RELEASE.yml -p greenbone-community-edition \
     exec -u gvmd gvmd gvmd --user=admin --new-password=$password
 ## MOD
-clear
+sleep 2
 echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/)"
 ## MOD
 echo
