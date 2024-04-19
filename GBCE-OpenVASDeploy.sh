@@ -75,14 +75,16 @@ echo
 read -s -p "Password for admin user: " password
 docker compose -f $DOWNLOAD_DIR/docker-compose-$RELEASE.yml -p greenbone-community-edition \
     exec -u gvmd gvmd gvmd --user=admin --new-password=$password
-
+## MOD
+clear
+echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/)"
+## MOD
 echo
 echo "The feed data will be loaded now. This process may take several minutes up to hours."
 echo "Before the data is not loaded completely, scans will show insufficient or erroneous results."
 echo "See https://greenbone.github.io/docs/latest/$RELEASE/container/workflows.html#loading-the-feed-changes for more details."
 echo
 ## MOD
-echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/)"
 ## This is a headless system - Dont 
 # echo "Press Enter to open the Greenbone Security Assistant web interface in the web browser."
 # read
