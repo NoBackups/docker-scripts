@@ -82,6 +82,7 @@ echo "Before the data is not loaded completely, scans will show insufficient or 
 echo "See https://greenbone.github.io/docs/latest/$RELEASE/container/workflows.html#loading-the-feed-changes for more details."
 echo
 ## MOD
+echo "Access via: $(echo "http://$(hostname -I |awk '{print $1}'):9392/)"
 ## This is a headless system - Dont 
 # echo "Press Enter to open the Greenbone Security Assistant web interface in the web browser."
 # read
