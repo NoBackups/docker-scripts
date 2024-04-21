@@ -74,7 +74,8 @@ echo
 
 read -s -p "Password for admin user: " password
 docker compose -f $DOWNLOAD_DIR/docker-compose-$RELEASE.yml -p greenbone-community-edition \
-    exec -u gvmd gvmd gvmd --user=admin --new-password=$password
+    exec -u gvmd gvmd gvmd --user=admin --new-password=$password ;
+    
 ## MOD
 sleep 2
 echo
